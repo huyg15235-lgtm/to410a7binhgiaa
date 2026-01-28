@@ -189,15 +189,22 @@ section.active{display:block}
   cursor:pointer;transition:.4s;
 }
 .member:hover{
-  transform:translateY(-14px) scale(1.05);
+  transform:translateY(-14px);   /* KHÔNG scale */
   box-shadow:0 0 70px rgba(79,172,254,.7);
 }
 .leader{box-shadow:0 0 90px rgba(255,215,0,.9)}
 .avatar{
-  width:110px;height:110px;
+  width:110px;
+  height:110px;
   border-radius:50%;
   margin:0 auto 16px;
-  background:linear-gradient(135deg,#4facfe,#00eaff);
+
+  background-size: cover;        /* ảnh không méo */
+  background-position: center;   /* luôn căn giữa */
+  background-repeat: no-repeat;
+
+  border:2px solid rgba(79,172,254,.6);
+  box-shadow:0 0 25px rgba(79,172,254,.6);
 }
 .member strong{display:block}
 .member span{font-size:.85rem;color:var(--muted)}
